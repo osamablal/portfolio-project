@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do-App</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Container Title -->
+      <div class="container-header">
+        <h2 class="container-header-title">To-Do-App</h2>
+      </div>
+
+      <!-- To-do Input Field -->
+      <div class="todo-input-group">
+        <label for="task-input" class="todo-label"> Add new task </label>
+
+        <form id="taskForm" class="todo-input-task">
+          <input type="text" class="todo-input" id="task-input" />
+          <button id="add-task-btn" class="todo-input-btn">+</button>
+        </form>
+      </div>
+
+      <!-- To-do Filter -->
+      <div class="todo-filter">
+        <label class="todo-label">View Tasks Filter</label>
+
+        <div class="todo-filter-input-group">
+          <label for="allTasks" class="filter-item">
+            <input type="radio" name="filter" id="allTasks" />
+            <span>All Tasks</span>
+          </label>
+
+          <label for="finishedTasks" class="filter-item">
+            <input type="radio" name="filter" id="finishedTasks" />
+            <span>Finished</span>
+          </label>
+
+          <label for="notFinishedTasks" class="filter-item">
+            <input type="radio" name="filter" id="notFinishedTasks" />
+            <span>Not Finished</span>
+          </label>
+        </div>
+
+        <div class="filter-btn-group">
+          <button class="filter-btn clear-all" id="clear-all">
+            Clear all tasks
+          </button>
+
+          <button class="filter-btn clear-finished" id="clear-finished">
+            Clear finished tasks
+          </button>
+        </div>
+      </div>
+
+      <!-- Tasks Container -->
+      <div class="tasks-container">
+        <div class="tasks-container-header">
+          <label class="todo-lable">Tasks</label>
+        </div>
+
+        <div class="tasks-boxes"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
